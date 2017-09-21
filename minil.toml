@@ -1,0 +1,4 @@
+name = "Log-Any-Plugin-Color"
+# badges = ["travis"]
+module_maker="ModuleBuildTiny"
+
