@@ -23,7 +23,7 @@ my %bad = (
     scream => 'blue',   # bad log method
 );
 
-Log::Any::Plugin->add('Color', %colors, %bad);
+Log::Any::Plugin->add('ANSIColor', %colors, %bad);
 
 like($warning, qr/Unknown logging methods: panic, scream at/,
         "Warned about bad methods");

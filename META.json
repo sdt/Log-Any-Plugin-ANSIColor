@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Log-Any-Plugin-Color",
+   "name" : "Log-Any-Plugin-ANSIColor",
    "no_index" : {
       "directory" : [
          "t",
@@ -57,13 +57,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/sdt/Log-Any-Plugin-Color/issues"
+         "web" : "https://github.com/sdt/Log-Any-Plugin-ANSIColor/issues"
       },
-      "homepage" : "https://github.com/sdt/Log-Any-Plugin-Color",
+      "homepage" : "https://github.com/sdt/Log-Any-Plugin-ANSIColor",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/sdt/Log-Any-Plugin-Color.git",
-         "web" : "https://github.com/sdt/Log-Any-Plugin-Color"
+         "url" : "git://github.com/sdt/Log-Any-Plugin-ANSIColor.git",
+         "web" : "https://github.com/sdt/Log-Any-Plugin-ANSIColor"
       }
    },
    "version" : "0.01",

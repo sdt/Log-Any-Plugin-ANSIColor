@@ -1,4 +1,4 @@
-package Log::Any::Plugin::Color;
+package Log::Any::Plugin::ANSIColor;
 use 5.008001;
 use strict;
 use warnings;
@@ -59,17 +59,17 @@ __END__
 
 =head1 NAME
 
-Log::Any::Plugin::Color - Auto-colorize logs using Term::ANSIColor
+Log::Any::Plugin::ANSIColor - Auto-colorize logs using Term::ANSIColor
 
 =head1 SYNOPSIS
 
     use Log::Any::Plugin;
 
-    Log::Any::Plugin->add('Color', default => 1, debug => 'blue on_white');
+    Log::Any::Plugin->add('ANSIColor', default => 1, debug => 'blue on_white');
 
 =head1 DESCRIPTION
 
-Log::Any::Plugin::Color applies ANSI colors to log messages depending on the log level.
+Log::Any::Plugin::ANSIColor applies ANSI colors to log messages depending on the log level.
 
 =head1 LICENSE
 

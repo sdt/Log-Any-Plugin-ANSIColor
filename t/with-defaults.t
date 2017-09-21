@@ -14,11 +14,11 @@ my %colors = (
     error => 'none',
 );
 
-Log::Any::Plugin->add('Color', default => 1, %colors);
+Log::Any::Plugin->add('ANSIColor', default => 1, %colors);
 
 my %default_colors = do {
     no warnings 'once';
-    %Log::Any::Plugin::Color::default;
+    %Log::Any::Plugin::ANSIColor::default;
 };
 
 check_log_colors(%default_colors, %colors);

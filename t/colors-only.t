@@ -13,7 +13,7 @@ my %colors = (
     warning => 'black on_white',
 );
 
-Log::Any::Plugin->add('Color', %colors);
+Log::Any::Plugin->add('ANSIColor', %colors);
 
 check_log_colors(%colors);
 

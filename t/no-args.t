@@ -9,11 +9,11 @@ use lib './t/lib';
 use PluginTest  qw( check_log_colors );
 
 
-Log::Any::Plugin->add('Color');
+Log::Any::Plugin->add('ANSIColor');
 
 my %default_colors = do {
     no warnings 'once';
-    %Log::Any::Plugin::Color::default;
+    %Log::Any::Plugin::ANSIColor::default;
 };
 
 check_log_colors(%default_colors);

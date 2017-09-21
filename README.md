@@ -1,17 +1,17 @@
-[![Build Status](https://travis-ci.org/sdt/Log-Any-Plugin-Color.svg?branch=master)](https://travis-ci.org/sdt/Log-Any-Plugin-Color)
+[![Build Status](https://travis-ci.org/sdt/Log-Any-Plugin-ANSIColor.svg?branch=master)](https://travis-ci.org/sdt/Log-Any-Plugin-ANSIColor)
 # NAME
 
-Log::Any::Plugin::Color - Auto-colorize logs using Term::ANSIColor
+Log::Any::Plugin::ANSIColor - Auto-colorize logs using Term::ANSIColor
 
 # SYNOPSIS
 
     use Log::Any::Plugin;
 
-    Log::Any::Plugin->add('Color', default => 1, debug => 'blue on_white');
+    Log::Any::Plugin->add('ANSIColor', default => 1, debug => 'blue on_white');
 
 # DESCRIPTION
 
-Log::Any::Plugin::Color applies ANSI colors to log messages depending on the log level.
+Log::Any::Plugin::ANSIColor applies ANSI colors to log messages depending on the log level.
 
 # LICENSE
 
