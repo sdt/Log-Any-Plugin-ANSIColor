@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/sdt/Log-Any-Plugin-Color.svg?branch=master)](https://travis-ci.org/sdt/Log-Any-Plugin-Color)
 # NAME
 
 Log::Any::Plugin::Color - Auto-colorize logs using Term::ANSIColor
