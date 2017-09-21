@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Auto-colorize logs using Term::ANSIColor",
    "author" : [
       "Stephen Thirlwall <sdt@cpan.org>"
    ],
@@ -42,16 +42,30 @@
       },
       "runtime" : {
          "requires" : {
+            "Log::Any::Plugin" : "0.004",
+            "Term::ANSIColor" : "2.02",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
+            "Log::Any::Test" : "0",
             "Test::More" : "0.98"
          }
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/sdt/Log-Any-Plugin-Color/issues"
+      },
+      "homepage" : "https://github.com/sdt/Log-Any-Plugin-Color",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/sdt/Log-Any-Plugin-Color.git",
+         "web" : "https://github.com/sdt/Log-Any-Plugin-Color"
+      }
+   },
    "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
