@@ -19,11 +19,17 @@ Log::Any::Plugin::ANSIColor - Auto-colorize Log::Any logs with Term::ANSIColor
 
 Log::Any::Plugin::ANSIColor automatically applies ANSI colors to log messages depending on the log level.
 
+For example, with the default colorscheme, `error` logs are red, `warning` logs are yellow.
+
+If a given log level has no coloring, the original log method is left intact, and incurs no overhead.
+
 # USAGE
 
-Adding the plugin with no extra arguments gives the default colorscheme. Info and notice messages have no special coloring.
+Adding the plugin with no extra arguments gives the default colorscheme.
 
     Log::Any::Plugin->add('ANSIColor');
+
+Note that `info` and `notice` messages have no special coloring in the default colorscheme.
 
 Specify some colors to completely replace the default colorscheme. Only the specified colors are applied.
 
