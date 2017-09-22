@@ -1,5 +1,5 @@
 {
-   "abstract" : "Auto-colorize logs using Term::ANSIColor",
+   "abstract" : "Auto-colorize Log::Any logs with Term::ANSIColor",
    "author" : [
       "Stephen Thirlwall <sdt@cpan.org>"
    ],

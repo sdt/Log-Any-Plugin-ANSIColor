@@ -1,17 +1,47 @@
 [![Build Status](https://travis-ci.org/sdt/Log-Any-Plugin-ANSIColor.svg?branch=master)](https://travis-ci.org/sdt/Log-Any-Plugin-ANSIColor)
 # NAME
 
-Log::Any::Plugin::ANSIColor - Auto-colorize logs using Term::ANSIColor
+Log::Any::Plugin::ANSIColor - Auto-colorize Log::Any logs with Term::ANSIColor
 
 # SYNOPSIS
 
-    use Log::Any::Plugin;
+    use Log::Any::Adapter 'Stderr';     # Choose any adapter that makes sense
 
-    Log::Any::Plugin->add('ANSIColor', default => 1, debug => 'blue on_white');
+    use Log::Any::Plugin;
+    Log::Any::Plugin->add('ANSIColor'); # Use the default colorscheme
+
+    # In this or any other module
+    use Log::Any qw( $log );
+
+    $log->alert('Call the police!');    # Prints as red on white
 
 # DESCRIPTION
 
-Log::Any::Plugin::ANSIColor applies ANSI colors to log messages depending on the log level.
+Log::Any::Plugin::ANSIColor automatically applies ANSI colors to log messages depending on the log level.
+
+# USAGE
+
+Adding the plugin with no extra arguments gives the default colorscheme. Info and notice messages have no special coloring.
+
+    Log::Any::Plugin->add('ANSIColor');
+
+Specify some colors to completely replace the default colorscheme. Only the specified colors are applied.
+
+    Log::Any::Plugin->add('ANSIColor',
+            error   => 'white on_red',
+            warning => 'black on_yellow',
+    );
+
+Use `default => 1` to include the default colorscheme with customisations. Default colors can be switched off by specifying `'none'` as the color.
+
+    Log::Any::Plugin->add('ANSIColor',
+            default => 1,               # use default colors
+            error   => 'white on_red',  # override error color
+            warning => 'none',          # turn off warning color
+    );
+
+Valid colors are any strings acceptable to `colored` in [Term::ANSIColor](https://metacpan.org/pod/Term::ANSIColor).
+eg. `'blue'` `'bright_red on_white`
 
 # LICENSE
 
