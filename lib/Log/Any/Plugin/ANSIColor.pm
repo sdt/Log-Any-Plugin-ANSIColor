@@ -42,7 +42,10 @@ sub install {
             my $old_method = get_old_method($adapter_class, $method_name);
             set_new_method($adapter_class, $method_name, sub {
                 my $self = shift;
-                $self->$old_method(colored([$color], @_));
+                $self->$old_method(
+                    # Colorise non-ref arguments, leave ref args alone.
+                    map { ref $_ ? $_ : colored([$color], $_) } @_
+                );
             });
         }
     }
