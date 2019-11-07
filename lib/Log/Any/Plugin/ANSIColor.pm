@@ -6,6 +6,9 @@ use warnings;
 our $VERSION = "0.01";
 
 use Log::Any::Plugin::Util  qw( get_old_method set_new_method );
+use Log::Any::Adapter::Util qw(
+    log_level_aliases logging_aliases logging_methods
+);
 use Term::ANSIColor         qw( colored colorvalid );
 
 our %default = (
@@ -28,7 +31,15 @@ sub install {
         }
     }
 
-    for my $method_name (Log::Any->logging_methods) {
+    my %aliases = log_level_aliases();
+    for my $alias (keys %aliases) {
+        my $method = $aliases{$alias};
+
+        $color_map{$alias} = $color_map{$method}
+            if exists $color_map{$method};
+    }
+
+    for my $method_name ( logging_methods(), logging_aliases() ) {
         if (my $color = delete $color_map{$method_name}) {
             # Specifying none as the color name disables colorisation for that
             # method.
