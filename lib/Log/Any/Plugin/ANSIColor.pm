@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use Log::Any::Plugin::Util  qw( get_old_method set_new_method );
 use Log::Any::Adapter::Util qw(

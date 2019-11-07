@@ -2,6 +2,8 @@ Revision history for Perl extension Log-Any-Plugin-ANSIColor
 
 {{$NEXT}}
 
+0.02 2019-11-07T05:50:17Z
+
     - don't colorize references arguments - thanks Yanick Champoux, and sorry for the slow turnaround
     - colorize alias methods the same as their primary counterparts
 
